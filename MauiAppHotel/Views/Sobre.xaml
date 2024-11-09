@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Sobre"
+             Title="Sobre"
+             NavigationPage.HasNavigationBar="False">
+    
+    <VerticalStackLayout>
+        <Label 
+            Text="Aplicativo desenvolvido por:"
+            TextColor="{StaticResource Primary}"
+            VerticalOptions="CenterAndExpand" 
+            HorizontalOptions="CenterAndExpand"
+            Padding="30"/>
+
+        <Frame Padding="10" Margin="20" BorderColor="{StaticResource Primary}">
+            <VerticalStackLayout>
+
+                <Image Source="logodsmedia.png" 
+                       Aspect="AspectFit"
+                       HeightRequest="100" 
+                       WidthRequest="150"
+                       HorizontalOptions="Center"/>
+
+                <Label Text="Desenvolvedor: Daniele Sampaio"
+                      FontFamily="ItimRegular"
+                      Padding="10"
+                      Margin="0"
+                       VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand"/>
+
+                <Label Text="Data de Desenvolvimento: outubro/24"
+                       FontFamily="ItimRegular"
+                       Padding="10"
+                       VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+
+               
+            </VerticalStackLayout>
+            
+        </Frame>
+
+        <Button Text="voltar"
+                BackgroundColor="Transparent"
+                TextColor="{StaticResource Primary}"
+                Margin="10"
+                Clicked="Button_Clicked"/>
+
+
+    </VerticalStackLayout>
+</ContentPage>
