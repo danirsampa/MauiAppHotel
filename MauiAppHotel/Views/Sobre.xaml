@@ -3,17 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppHotel.Views.Sobre"
              Title="Sobre"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="RosyBrown">
     
     <VerticalStackLayout>
         <Label 
             Text="Aplicativo desenvolvido por:"
-            TextColor="{StaticResource Primary}"
+            TextColor="Beige"
             VerticalOptions="CenterAndExpand" 
             HorizontalOptions="CenterAndExpand"
             Padding="30"/>
 
-        <Frame Padding="10" Margin="20" BorderColor="{StaticResource Primary}">
+        <Frame Padding="10" Margin="20" BorderColor="beige">
             <VerticalStackLayout>
 
                 <Image Source="logodsmedia.png" 
@@ -24,12 +25,14 @@
 
                 <Label Text="Desenvolvedor: Daniele Sampaio"
                       FontFamily="ItimRegular"
+                      TextColor="RosyBrown" 
                       Padding="10"
                       Margin="0"
-                       VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand"/>
+                      VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand"/>
 
                 <Label Text="Data de Desenvolvimento: outubro/24"
                        FontFamily="ItimRegular"
+                       TextColor="RosyBrown"
                        Padding="10"
                        VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
 
@@ -39,9 +42,10 @@
         </Frame>
 
         <Button Text="voltar"
-                BackgroundColor="Transparent"
-                TextColor="{StaticResource Primary}"
+                BackgroundColor="Beige"
+                TextColor="RosyBrown"
                 Margin="10"
+                HorizontalOptions="Center"
                 Clicked="Button_Clicked"/>
 
 

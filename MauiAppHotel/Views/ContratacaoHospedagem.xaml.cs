@@ -22,8 +22,18 @@ public partial class ContratacaoHospedagem : ContentPage
     {
         try
         {
-            Navigation.PushAsync(new HospedagemContratada());
+            int adultos = (int)stp_adultos.Value;
+            int criancas = (int)stp_criancas.Value;
 
+            DateTime checkInDate = dtpck_checkin.Date;
+            DateTime checkOutDate = dtpck_checkout.Date;
+
+            if (checkOutDate <= checkInDate)
+            {
+                DisplayAlert("Erro", "A data de check-out deve ser posterior à data de check-in.", "OK");
+                return;
+            }
+            Navigation.PushAsync(new HospedagemContratada(checkInDate, checkOutDate, adultos, criancas));
         }
         catch (Exception ex)
         {
